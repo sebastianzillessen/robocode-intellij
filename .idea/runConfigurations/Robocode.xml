@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Robocode" type="Application" factoryName="Application" singleton="true">
+    <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+    <option name="MAIN_CLASS_NAME" value="robocode.Robocode" />
+    <module name="RoboCodeChallenge" />
+    <option name="PROGRAM_PARAMETERS" value="-battle ./battles/default.battle" />
+    <option name="VM_PARAMETERS" value="-Xmx512M -XX:+IgnoreUnrecognizedVMOptions &quot;--add-opens=java.base/sun.net.www.protocol.jar=ALL-UNNAMED&quot; &quot;--add-opens=java.base/java.lang.reflect=ALL-UNNAMED&quot; &quot;--add-opens=java.desktop/sun.awt=ALL-UNNAMED&quot;" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/dist" />
+    <method />
+  </configuration>
+</component>

@@ -11,6 +11,7 @@ public class RoboState {
     private ArrayList<ScannedRobotEvent> events = new ArrayList<>();
     private int lastScannedX;
     private int lastScannedY;
+    private boolean dead;
 
     public RoboState(TrackingRobot trackingRobot, Color color) {
         this.trackingRobot = trackingRobot;
@@ -65,10 +66,19 @@ public class RoboState {
         return "RoboState{" +
                 "  lastScannedX=" + lastScannedX +
                 ", lastScannedY=" + lastScannedY +
+                ", dead=" + dead +
                 '}';
     }
 
     public int getDistance() {
         return (int) getLatestState().getDistance();
+    }
+
+    public void die() {
+        this.dead = true;
+    }
+
+    public boolean isDead() {
+        return dead;
     }
 }

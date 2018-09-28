@@ -24,11 +24,11 @@ public class DisplayTrackedRobots {
         Collection<RoboState> robotStates = this.trackingCapability.getRoboStateHashMap().values();
 
         drawLastKnownPositions(g, robotStates);
-        drawClosestRobot(g, robotStates);
+        drawClosestRobot(g);
     }
 
-    private void drawClosestRobot(Graphics2D g, Collection<RoboState> robotStates) {
-        Optional<RoboState> closestRobot = trackingCapability.getClosestRobot(robotStates);
+    private void drawClosestRobot(Graphics2D g) {
+        Optional<RoboState> closestRobot = trackingCapability.getClosestRobot();
         closestRobot.ifPresent(roboState -> drawClosestRobot(g, roboState));
     }
 
@@ -36,7 +36,11 @@ public class DisplayTrackedRobots {
     public void drawLastKnownPositions(Graphics2D g, Collection<RoboState> robotStates) {
 
         for (RoboState s : robotStates) {
-            g.setColor(Color.GRAY);
+            if (s.isDead()) {
+                g.setColor(Color.GRAY);
+            } else {
+                g.setColor(Color.YELLOW);
+            }
 
             int lastScannedX = s.getLastScannedX();
             int lastScannedY = s.getLastScannedY();
