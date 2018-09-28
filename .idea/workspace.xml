@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c48c3aef-f5f4-4e82-913a-e1fbd4c532b0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/SimpleSpinBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/robots/sample/SittingDuck.data/count.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dist/robots/sample/SittingDuck.data/count.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/Capability.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/ContinousRadarMovement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/CustomizeRobot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/DirectTargetMovement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/DisplayTrackedRobots.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/ShootingCapability.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/SpinningMovement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingCapability.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingRobot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/trackingrobot/RoboState.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
@@ -57,11 +46,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleSpinBot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleSpinBot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/SimpleSpinBot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="202">
               <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -112,7 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/ContinousGunMovement.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/DirectTargetMovement.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/ShootingCapability.java" />
@@ -126,6 +123,7 @@
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingRobot.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/SimpleSpinBot.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -299,7 +297,7 @@
       <option name="presentableId" value="Default" />
       <updated>1538113185272</updated>
       <workItem from="1538113189201" duration="185000" />
-      <workItem from="1538113403954" duration="9817000" />
+      <workItem from="1538113403954" duration="9886000" />
     </task>
     <task id="LOCAL-00001" summary="Addaptions for tracking">
       <created>1538123518875</created>
@@ -315,11 +313,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538134435200</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removed TrackingRobot and added simple: SpinningBot">
+      <created>1538134741509</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1538134741509</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10002000" />
+    <option name="totallyTimeSpent" value="10071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
@@ -335,11 +340,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3296582" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3296582" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32855567" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3296582" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32855567" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info anchor="bottom" id="EvoSuite" order="7" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893" />
@@ -391,7 +396,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Addaptions for tracking" />
     <MESSAGE value="Adding Readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Readme.md" />
+    <MESSAGE value="Removed TrackingRobot and added simple: SpinningBot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed TrackingRobot and added simple: SpinningBot" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dist/robocode.sh">
@@ -401,13 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -594,6 +593,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
