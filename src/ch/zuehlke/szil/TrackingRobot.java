@@ -21,8 +21,6 @@ public class TrackingRobot extends AdvancedRobot {
         movementCapability = new SpinningMovement(this);
         shootingCapability = new ShootingCapability(this);
         customization = new CustomizeRobot(this);
-
-
     }
 
     public void run() {
