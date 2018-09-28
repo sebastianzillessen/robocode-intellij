@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c48c3aef-f5f4-4e82-913a-e1fbd4c532b0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Robocode.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/Capability.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/ContinousRadarMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/CustomizeRobot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/DirectTargetMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/ShootingCapability.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/SpinningMovement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/config/robocode.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dist/config/robocode.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/config/window.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dist/config/window.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/robots/robot.database" beforeDir="false" afterPath="$PROJECT_DIR$/dist/robots/robot.database" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/robots/sample/SittingDuck.data/count.dat" beforeDir="false" afterPath="$PROJECT_DIR$/dist/robots/sample/SittingDuck.data/count.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/DisplayTrackedRobots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/DisplayTrackedRobots.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingCapability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingCapability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/zuehlke/szil/trackingrobot/RoboState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/zuehlke/szil/trackingrobot/RoboState.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,35 +18,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DisplayTrackedRobots.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/DisplayTrackedRobots.java">
+      <file leaf-file-name="Tracker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/robots/sample/Tracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+            <state relative-caret-position="-416">
+              <caret line="47" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tracker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/robots/sample/Tracker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="42" column="35" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="42" selection-end-column="35" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrackingRobot.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TrackingRobot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingRobot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+            <state relative-caret-position="426">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
               <folding>
                 <element signature="e#1400#1401#0" expanded="true" />
                 <element signature="e#1441#1442#0" expanded="true" />
@@ -71,11 +48,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ShootingCapability.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/ShootingCapability.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContinousRadarMovement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/ContinousRadarMovement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SpinningMovement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/SpinningMovement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+            <state relative-caret-position="84">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding>
                 <element signature="e#195#196#0" expanded="true" />
                 <element signature="e#229#230#0" expanded="true" />
@@ -107,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomizeRobot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomizeRobot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/CustomizeRobot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="137">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -119,8 +114,8 @@
       <file leaf-file-name="Capability.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/Capability.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="60">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -128,23 +123,8 @@
       <file leaf-file-name="TrackingCapability.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingCapability.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoboState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/trackingrobot/RoboState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-              <folding>
-                <element signature="e#1976#1977#0" expanded="true" />
-                <element signature="e#2007#2008#0" expanded="true" />
-                <element signature="e#2022#2023#0" expanded="true" />
-                <element signature="e#2050#2051#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="279">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -162,6 +142,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>run</find>
+      <find>normalRelativeAngleDegrees</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,14 +162,14 @@
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/ContinousGunMovement.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/DirectTargetMovement.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/ShootingCapability.java" />
-        <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/ContinousRadarMovement.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingCapability.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/trackingrobot/RoboState.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/DisplayTrackedRobots.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/Capability.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/SpinningMovement.java" />
-        <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingRobot.java" />
         <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/CustomizeRobot.java" />
+        <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingRobot.java" />
+        <option value="$PROJECT_DIR$/src/ch/zuehlke/szil/ContinousRadarMovement.java" />
       </list>
     </option>
   </component>
@@ -203,8 +184,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -315,6 +296,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
@@ -413,32 +395,39 @@
       <option name="presentableId" value="Default" />
       <updated>1538113185272</updated>
       <workItem from="1538113189201" duration="185000" />
-      <workItem from="1538113403954" duration="3847000" />
+      <workItem from="1538113403954" duration="7249000" />
     </task>
+    <task id="LOCAL-00001" summary="Addaptions for tracking">
+      <created>1538123518875</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1538123518875</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4032000" />
+    <option name="totallyTimeSpent" value="7434000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32893" />
+      <window_info anchor="bottom" id="Messages" weight="0.32893" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3949802" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3296582" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3296582" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3296582" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32855567" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29613733" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info anchor="bottom" id="EvoSuite" order="7" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893" />
@@ -460,6 +449,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Addaptions for tracking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Addaptions for tracking" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dist/robocode.sh">
@@ -515,17 +508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/ShootingCapability.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/dist/libs/robocode.jar!/robocode/AdvancedRobot.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -547,17 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/ContinousRadarMovement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/trackingrobot/RoboState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -567,23 +538,6 @@
             <element signature="e#2007#2008#0" expanded="true" />
             <element signature="e#2022#2023#0" expanded="true" />
             <element signature="e#2050#2051#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingCapability.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/robots/sample/Tracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="42" column="35" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="42" selection-end-column="35" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -617,17 +571,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/Capability.java">
+    <entry file="file://$PROJECT_DIR$/dist/robots/sample/Tracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="-416">
+          <caret line="47" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingCapability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/SpinningMovement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="84">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
             <element signature="e#195#196#0" expanded="true" />
             <element signature="e#229#230#0" expanded="true" />
@@ -635,10 +600,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/ShootingCapability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/ContinousRadarMovement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/CustomizeRobot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/Capability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/TrackingRobot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        <state relative-caret-position="426">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="e#1400#1401#0" expanded="true" />
             <element signature="e#1441#1442#0" expanded="true" />
@@ -647,13 +640,6 @@
             <element signature="e#1187#1188#0" expanded="true" />
             <element signature="e#1223#1224#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/zuehlke/szil/CustomizeRobot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
         </state>
       </provider>
     </entry>
