@@ -28,15 +28,9 @@ public class StadiBot extends AdvancedRobot {
         setScanColor(Color.green);
 
         // Loop forever
+        int turns = 0;
         while (true) {
-            // Tell the game that when we take move,
-            // we'll also want to turn right... a lot.
-            setTurnRight(10000);
-            // Limit our speed to 5
-            setMaxVelocity(5);
-            // Start moving (and turning)
             ahead(10000);
-            // Repeat.
         }
     }
 
@@ -44,7 +38,9 @@ public class StadiBot extends AdvancedRobot {
      * onScannedRobot: Fire hard!
      */
     public void onScannedRobot(ScannedRobotEvent e) {
-        fire(3);
+        if (!e.isSentryRobot()) {
+            fire(3);
+        }
     }
 
     /**
