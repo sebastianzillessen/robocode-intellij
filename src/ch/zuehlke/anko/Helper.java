@@ -1,4 +1,4 @@
-package ch.zuehlke.szil;
+package ch.zuehlke.anko;
 
 import static java.lang.Math.PI;
 
