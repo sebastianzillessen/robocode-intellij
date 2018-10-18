@@ -24,36 +24,31 @@ public class AndresBot extends AdvancedRobot {
 
     int turnDirection = 1;
 
-    List<Color> colors = new ArrayList<Color>();
     
     public void run() {
         // Set colors
-        colors.add(Color.blue);
-        colors.add(Color.orange);
-        colors.add(Color.white);
-        colors.add(Color.cyan);
-        colors.add(Color.black);
 
-        setNewColors();
+
         setRadarColor(Color.black);
         setScanColor(Color.yellow);
 
         // Loop forever
         while (true) {
-            
+
             setNewColors();
-            moveInSafeZoneIfNeeded();
-            goToRandomLocation();
+            move();
         }
     }
 
     private void goToRandomLocation() {
-        int destinationX = rand.nextInt() % ((int)getBattleFieldWidth() - getSentryBorderSize() * 2) + (int)getSentryBorderSize();
-        int destinationY = rand.nextInt() % ((int)getBattleFieldHeight() - getSentryBorderSize() * 2) + (int)getSentryBorderSize();
+        int destinationX = rand.nextInt() % ((int)getBattleFieldWidth() - getSentryBorderSize() * 2) ;
+        destinationX += (int)getSentryBorderSize();
+        int destinationY = rand.nextInt() % ((int)getBattleFieldHeight() - getSentryBorderSize() * 2);
+        destinationY += (int)getSentryBorderSize();
         goTo(destinationX, destinationY);
     }
 
-    private void moveInSafeZoneIfNeeded() {
+    private Boolean moveInSafeZoneIfNeeded() {
         double gotoX;
         double gotoY;
         if (getX() < getSentryBorderSize()) {
@@ -77,7 +72,10 @@ public class AndresBot extends AdvancedRobot {
 
         if (gotoX != getX() || gotoY != getY()) {
             goTo(gotoX, gotoY);
+            return true;
         }
+
+        return false;
     }
 
       //Move towards an x and y coordinate
@@ -110,16 +108,17 @@ public class AndresBot extends AdvancedRobot {
         return dir;
     }
 
+    private void move() {
+        Boolean moving = moveInSafeZoneIfNeeded();
+        if (!moving) goToRandomLocation();
+        execute();
+    }
+
     private static Random rand = new Random();
     private void setNewColors() {
-        
-        int colorid = rand.nextInt() % colors.size();
-        setBodyColor(colors.get(colorid));
-        colorid = rand.nextInt() % colors.size();
-        setGunColor(colors.get(colorid));
-        colorid = rand.nextInt() % colors.size();
-        setBulletColor(colors.get(colorid));
-
+        setBodyColor(new Color(rand.nextInt()%24));
+        setGunColor(new Color(rand.nextInt()%24));
+        setBulletColor(new Color(rand.nextInt()%24));
     }
 
     /**
@@ -140,6 +139,7 @@ public class AndresBot extends AdvancedRobot {
         if (bearingFromGun == 0.0D) {
             this.scan();
         }
+
     }
 
     /**
@@ -165,7 +165,5 @@ public class AndresBot extends AdvancedRobot {
         } else if (e.getEnergy() > 0.4D) {
             this.fire(0.1D);
         }
-
-        this.ahead(40.0D);
     }
 }
