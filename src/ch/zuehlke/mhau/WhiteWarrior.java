@@ -31,6 +31,10 @@ public class WhiteWarrior extends AdvancedRobot {
                     .min(comparing(ScannedRobot::getEnergy));
 
             goTo(battleFieldWidth / 2, battleFieldHeight / 2);
+
+            fire(5);
+
+            turnLeft(10);
         }
     }
 
