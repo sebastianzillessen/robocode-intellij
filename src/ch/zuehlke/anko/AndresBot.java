@@ -27,55 +27,21 @@ public class AndresBot extends AdvancedRobot {
     
     public void run() {
         // Set colors
-
-
         setRadarColor(Color.black);
         setScanColor(Color.yellow);
 
         // Loop forever
         while (true) {
-
-            setNewColors();
             move();
         }
     }
 
     private void goToRandomLocation() {
-        int destinationX = rand.nextInt() % ((int)getBattleFieldWidth() - getSentryBorderSize() * 2) ;
+        int destinationX = rand.nextInt() % ((int)getBattleFieldWidth() - (getSentryBorderSize() * 2)) ;
         destinationX += (int)getSentryBorderSize();
         int destinationY = rand.nextInt() % ((int)getBattleFieldHeight() - getSentryBorderSize() * 2);
         destinationY += (int)getSentryBorderSize();
         goTo(destinationX, destinationY);
-    }
-
-    private Boolean moveInSafeZoneIfNeeded() {
-        double gotoX;
-        double gotoY;
-        if (getX() < getSentryBorderSize()) {
-            gotoX = getSentryBorderSize() + 10;
-            gotoY = getY();
-        } else if (getBattleFieldWidth() - getSentryBorderSize() < getX()) {
-            gotoX = getSentryBorderSize() + 10;
-            gotoY = getY();
-        } else {
-            gotoX = getX();
-            gotoY = getY();
-        }
-
-        if (getY() < getSentryBorderSize()) {
-            gotoY = getSentryBorderSize() + 10;
-        } else if (getBattleFieldHeight() - getSentryBorderSize() < getY()) {
-            gotoY = getSentryBorderSize() + 10;
-        } else {
-            gotoY = getY();
-        }
-
-        if (gotoX != getX() || gotoY != getY()) {
-            goTo(gotoX, gotoY);
-            return true;
-        }
-
-        return false;
     }
 
       //Move towards an x and y coordinate
@@ -84,7 +50,7 @@ public class AndresBot extends AdvancedRobot {
         double dist = 20;
         double angle = Math.toDegrees(Helper.absbearing(getX(), getY(), x, y));
         double r = turnTo(angle);
-        setAhead(dist * r);
+        ahead(dist * r);
     }
 
 
@@ -109,8 +75,9 @@ public class AndresBot extends AdvancedRobot {
     }
 
     private void move() {
-        Boolean moving = moveInSafeZoneIfNeeded();
-        if (!moving) goToRandomLocation();
+        setNewColors();
+        goToRandomLocation();
+        scan();
         execute();
     }
 
@@ -125,20 +92,25 @@ public class AndresBot extends AdvancedRobot {
      * onScannedRobot: Fire hard!
      */
     public void onScannedRobot(ScannedRobotEvent e) {
-        double absoluteBearing = this.getHeading() + e.getBearing();
-        double bearingFromGun = Utils.normalRelativeAngleDegrees(absoluteBearing - this.getGunHeading());
-        if (Math.abs(bearingFromGun) <= 3.0D) {
-            this.turnGunRight(bearingFromGun);
-            if (this.getGunHeat() == 0.0D) {
-                this.fire(Math.min(3.0D - Math.abs(bearingFromGun), this.getEnergy() - 0.1D));
+        if (!e.isSentryRobot()) {
+            double absoluteBearing = this.getHeading() + e.getBearing();
+            double bearingFromGun = Utils.normalRelativeAngleDegrees(absoluteBearing - this.getGunHeading());
+            if (Math.abs(bearingFromGun) <= 3.0D) {
+                this.turnGunRight(bearingFromGun);
+                if (this.getGunHeat() == 0.0D) {
+                    this.fire(Math.min(3.0D - Math.abs(bearingFromGun), this.getEnergy() - 0.1D));
+                }
+            } else {
+                this.turnGunRight(bearingFromGun);
             }
-        } else {
-            this.turnGunRight(bearingFromGun);
+
+            if (bearingFromGun == 0.0D) {
+                this.scan();
+            }
+
+            if ((rand.nextInt() % 3) == 0) move();
         }
 
-        if (bearingFromGun == 0.0D) {
-            this.scan();
-        }
 
     }
 
@@ -165,5 +137,7 @@ public class AndresBot extends AdvancedRobot {
         } else if (e.getEnergy() > 0.4D) {
             this.fire(0.1D);
         }
+
+        if ((rand.nextInt() % 3) == 0) move();
     }
 }
