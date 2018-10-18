@@ -16,6 +16,7 @@ public class Bot {
         this.position = position;
     }
 
-    
-
+    public String getName() {
+        return name;
+    }
 }
