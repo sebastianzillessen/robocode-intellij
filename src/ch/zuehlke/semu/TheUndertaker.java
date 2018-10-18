@@ -1,4 +1,4 @@
-package ch.zuehlke.szil;
+package ch.zuehlke.semu;
 
 import java.awt.Color;
 
