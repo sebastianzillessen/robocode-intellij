@@ -34,7 +34,8 @@ public class WhiteWarrior extends AdvancedRobot {
 
             fire(5);
 
-            turnLeft(10);
+            turnLeft(5);
+            turnRadarLeft(5);
         }
     }
 
