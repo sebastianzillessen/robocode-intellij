@@ -7,7 +7,7 @@ import robocode.RobotDeathEvent;
 import robocode.ScannedRobotEvent;
 import robocode.util.Utils;
 
-    public class TheUndertaker extends AdvancedRobot {
+public class TheUndertaker extends AdvancedRobot {
 
         public void run() {
             setBodyColor(Color.BLACK);
@@ -74,5 +74,4 @@ import robocode.util.Utils;
             }
         }
 
-    }
 }
