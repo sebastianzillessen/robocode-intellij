@@ -1,6 +1,6 @@
 package ch.zuehlke.set;
 
-import ch.zuehlke.semu.Helper;
+import ch.zuehlke.helpers.Helper;
 import robocode.Robot;
 import robocode.ScannedRobotEvent;
 

@@ -1,4 +1,4 @@
-package ch.zuehlke.semu;
+package ch.zuehlke.helpers;
 
 import static java.lang.Math.PI;
 

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-import static ch.zuehlke.semu.Helper.*;
+import static ch.zuehlke.helpers.Helper.*;
 import static java.util.Comparator.comparing;
 
 public class WhiteWarrior extends AdvancedRobot {
@@ -34,7 +34,8 @@ public class WhiteWarrior extends AdvancedRobot {
 
             fire(5);
 
-            turnLeft(10);
+            turnLeft(5);
+            turnRadarLeft(5);
         }
     }
 

@@ -1,6 +1,5 @@
 package ch.zuehlke.sti;
 
-import javafx.geometry.Pos;
 
 public class Bot {
 
@@ -16,6 +15,7 @@ public class Bot {
         this.position = position;
     }
 
-    
-
+    public String getName() {
+        return name;
+    }
 }
