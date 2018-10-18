@@ -5,7 +5,7 @@
  * which accompanies this distribution, and is available at
  * http://robocode.sourceforge.net/license/epl-v10.html
  */
-package ch.zuehlke.szil;
+package ch.zuehlke.sti;
 
 
 import robocode.AdvancedRobot;
@@ -25,6 +25,8 @@ import java.awt.*;
  */
 public class StadiBot extends AdvancedRobot {
 
+    private Battleground battleground;
+
     /**
      * SpinBot's run method - Circle
      */
@@ -35,15 +37,18 @@ public class StadiBot extends AdvancedRobot {
         setRadarColor(Color.gray);
         setScanColor(Color.green);
 
+        battleground = new Battleground(getBattleFieldHeight(), getBattleFieldWidth());
+
         // Loop forever
         while (true) {
+            battleground.setMyPosition(new Position(getX(), getY()));
             // Tell the game that when we take move,
             // we'll also want to turn right... a lot.
-            setTurnRight(10000);
+            setTurnRight(100);
             // Limit our speed to 5
             setMaxVelocity(5);
             // Start moving (and turning)
-            ahead(10000);
+            ahead(10);
             // Repeat.
         }
     }
@@ -52,7 +57,12 @@ public class StadiBot extends AdvancedRobot {
      * onScannedRobot: Fire hard!
      */
     public void onScannedRobot(ScannedRobotEvent e) {
-        fire(3);
+        battleground.reportSpottedEnemy(e.getName(), e.getBearing(), e.getDistance());
+        if (e.isSentryRobot()) {
+            // do nothing
+        } else {
+            fire(3);
+        }
     }
 
     /**
