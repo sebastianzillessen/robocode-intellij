@@ -24,6 +24,12 @@ public class AndresBot extends AdvancedRobot {
 
     int turnDirection = 1;
 
+    int scannedX = 0;
+    int scannedY = 0;
+
+    int destinationX = 0;
+    int destinationY = 0;
+
     
     public void run() {
         // Set colors
@@ -37,10 +43,25 @@ public class AndresBot extends AdvancedRobot {
     }
 
     private void goToRandomLocation() {
-        int destinationX = rand.nextInt() % ((int)getBattleFieldWidth() - (getSentryBorderSize() * 2)) ;
-        destinationX += (int)getSentryBorderSize();
-        int destinationY = rand.nextInt() % ((int)getBattleFieldHeight() - getSentryBorderSize() * 2);
-        destinationY += (int)getSentryBorderSize();
+        if (destinationX == 0) {
+            destinationX = rand.nextInt() % ((int)getBattleFieldWidth() - (getSentryBorderSize() * 2)) ;
+            destinationX += (int)getSentryBorderSize();
+            destinationY = rand.nextInt() % ((int)getBattleFieldHeight() - getSentryBorderSize() * 2);
+            destinationY += (int)getSentryBorderSize();
+        }
+        if (rand.nextInt() % 2 == 0) {
+            if (rand.nextInt() % 2 == 0 && scannedX != 0) {
+                destinationX = scannedX;
+                destinationY = scannedY;
+            } else {
+                destinationX = rand.nextInt() % ((int) getBattleFieldWidth() - (getSentryBorderSize() * 2));
+                destinationX += (int) getSentryBorderSize();
+                destinationY = rand.nextInt() % ((int) getBattleFieldHeight() - getSentryBorderSize() * 2);
+                destinationY += (int) getSentryBorderSize();
+            }
+        }
+
+
         goTo(destinationX, destinationY);
     }
 
@@ -93,6 +114,9 @@ public class AndresBot extends AdvancedRobot {
      */
     public void onScannedRobot(ScannedRobotEvent e) {
         if (!e.isSentryRobot()) {
+            double angle = Math.toRadians((getHeading() + e.getBearing()) % 360);
+            scannedX = (int)(getX() + Math.sin(angle) * e.getDistance());
+            scannedY = (int)(getY() + Math.cos(angle) * e.getDistance());
             double absoluteBearing = this.getHeading() + e.getBearing();
             double bearingFromGun = Utils.normalRelativeAngleDegrees(absoluteBearing - this.getGunHeading());
             if (Math.abs(bearingFromGun) <= 3.0D) {
