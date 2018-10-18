@@ -1,12 +1,4 @@
-/**
- * Copyright (c) 2001-2018 Mathew A. Nelson and Robocode contributors
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://robocode.sourceforge.net/license/epl-v10.html
- */
-package ch.zuehlke.szil;
-
+package ch.zuehlke.sti;
 
 import robocode.AdvancedRobot;
 import robocode.HitRobotEvent;
@@ -23,17 +15,17 @@ import java.awt.*;
  * @author Mathew A. Nelson (original)
  * @author Flemming N. Larsen (contributor)
  */
-public class SimpleSpinBot extends AdvancedRobot {
+public class StadiBot extends AdvancedRobot {
 
     /**
      * SpinBot's run method - Circle
      */
     public void run() {
         // Set colors
-        setBodyColor(Color.blue);
-        setGunColor(Color.blue);
-        setRadarColor(Color.black);
-        setScanColor(Color.yellow);
+        setBodyColor(Color.black);
+        setGunColor(Color.yellow);
+        setRadarColor(Color.gray);
+        setScanColor(Color.green);
 
         // Loop forever
         while (true) {
