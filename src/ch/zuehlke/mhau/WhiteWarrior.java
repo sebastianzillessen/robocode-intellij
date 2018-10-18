@@ -6,7 +6,6 @@ import robocode.ScannedRobotEvent;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 import static ch.zuehlke.helpers.Helper.*;
 import static java.util.Comparator.comparing;
@@ -24,31 +23,49 @@ public class WhiteWarrior extends AdvancedRobot {
 
         double battleFieldHeight = getBattleFieldHeight();
         double battleFieldWidth = getBattleFieldWidth();
-        int sentryBorderSize = getSentryBorderSize();
+
+        double widthMiddle = battleFieldWidth / 2;
+        double heightMiddle = battleFieldHeight / 2;
+
+        setAdjustGunForRobotTurn(true);
+        setAdjustRadarForGunTurn(true);
 
         while (true) {
-            Optional<ScannedRobot> optionalWeakest = scannedRobots.values().stream()
-                    .min(comparing(ScannedRobot::getEnergy));
+            setTurnRadarRight(10);
+            if (getDistance(getX(), getY(), widthMiddle, heightMiddle) > heightMiddle) {
+                goTo(widthMiddle, heightMiddle);
+            } else {
+                /*scannedRobots.values()
+                        .stream()
+                        .min(comparing(ScannedRobot::getEnergy)).ifPresent(scannedRobot -> {
+                    System.out.println("going for " + scannedRobot);
 
-            goTo(battleFieldWidth / 2, battleFieldHeight / 2);
+                    turnTo(scannedRobot.getBearing());
+                    setAhead(scannedRobot.getDistance());
+                    setTurnGunLeft(scannedRobot.getBearing());
+                    fire(1);
 
-            fire(5);
+                });*/
+                setTurnGunLeft(30);
+                fire(3);
+                setAhead(10);
+                setTurnRight(45);
+            }
 
-            turnLeft(5);
-            turnRadarLeft(5);
+            execute();
         }
     }
 
     @Override
     public void onScannedRobot(ScannedRobotEvent event) {
-        String name = event.getName();
+        /*String name = event.getName();
         double bearing = normaliseBearing(event.getBearingRadians());
         double distance = event.getDistance();
         double energy = event.getEnergy();
         double heading = normaliseHeading(event.getHeadingRadians());
         double velocity = event.getVelocity();
 
-        scannedRobots.put(name, new ScannedRobot(bearing, distance, energy, heading, velocity));
+        scannedRobots.put(name, new ScannedRobot(name, bearing, distance, energy, heading, velocity));*/
     }
 
     void goTo(double x, double y) {
