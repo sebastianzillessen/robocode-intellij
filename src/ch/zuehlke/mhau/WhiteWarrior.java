@@ -6,9 +6,9 @@ import robocode.ScannedRobotEvent;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 import static ch.zuehlke.helpers.Helper.*;
-import static java.util.Comparator.comparing;
 
 public class WhiteWarrior extends AdvancedRobot {
 
@@ -30,9 +30,11 @@ public class WhiteWarrior extends AdvancedRobot {
         setAdjustGunForRobotTurn(true);
         setAdjustRadarForGunTurn(true);
 
+        Random r = new Random();
+
         while (true) {
             setTurnRadarRight(10);
-            if (getDistance(getX(), getY(), widthMiddle, heightMiddle) > heightMiddle) {
+            if (getDistance(getX(), getY(), widthMiddle, heightMiddle) > 350) {
                 goTo(widthMiddle, heightMiddle);
             } else {
                 /*scannedRobots.values()
@@ -46,10 +48,13 @@ public class WhiteWarrior extends AdvancedRobot {
                     fire(1);
 
                 });*/
-                setTurnGunLeft(30);
-                fire(3);
-                setAhead(10);
-                setTurnRight(45);
+
+                setTurnGunLeft(r.nextInt(40) + 40);
+                if (r.nextBoolean()) {
+                    fire(2);
+                }
+                setAhead(r.nextInt(70) + 70);
+                setTurnRight(r.nextInt(30) + 30);
             }
 
             execute();
