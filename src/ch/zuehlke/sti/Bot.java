@@ -1,6 +1,5 @@
 package ch.zuehlke.sti;
 
-import javafx.geometry.Pos;
 
 public class Bot {
 
