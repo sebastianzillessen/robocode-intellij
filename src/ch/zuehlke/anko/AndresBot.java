@@ -8,6 +8,7 @@
 package ch.zuehlke.anko;
 
 
+import ch.zuehlke.helpers.Helper;
 import robocode.AdvancedRobot;
 import robocode.HitRobotEvent;
 import robocode.ScannedRobotEvent;

@@ -1,13 +1,15 @@
-package ch.zuehlke.szil;
-
-import java.awt.Color;
+package ch.zuehlke.semu;
 
 import robocode.AdvancedRobot;
 import robocode.RobotDeathEvent;
 import robocode.ScannedRobotEvent;
 import robocode.util.Utils;
 
+import java.awt.*;
+
 public class TheUndertaker extends AdvancedRobot {
+
+    private String target;
 
     public void run() {
         setBodyColor(Color.BLACK);
@@ -18,12 +20,10 @@ public class TheUndertaker extends AdvancedRobot {
         setAdjustGunForRobotTurn(true);
         setAdjustRadarForGunTurn(true);
 
-        while(true){
+        while (true) {
             turnRadarRightRadians(Double.POSITIVE_INFINITY);
         }
     }
-
-    private String target;
 
     @Override
     public void onScannedRobot(ScannedRobotEvent event) {
@@ -32,7 +32,7 @@ public class TheUndertaker extends AdvancedRobot {
         }
 
         if (target.equals(event.getName())) {
-            double enemyPosition =	event.getBearingRadians() + getHeadingRadians();
+            double enemyPosition = event.getBearingRadians() + getHeadingRadians();
             setTurnRadarRightRadians((Utils.normalRelativeAngle(enemyPosition - getRadarHeadingRadians())));
 
             double toTurn = enemyPosition - getHeadingRadians();
