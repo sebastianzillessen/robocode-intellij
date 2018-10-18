@@ -13,6 +13,7 @@ import static ch.zuehlke.helpers.Helper.*;
 public class WhiteWarrior extends AdvancedRobot {
 
     Map<String, ScannedRobot> scannedRobots = new HashMap<>();
+    boolean doFire = false;
 
     @Override
     public void run() {
@@ -27,13 +28,12 @@ public class WhiteWarrior extends AdvancedRobot {
         double widthMiddle = battleFieldWidth / 2;
         double heightMiddle = battleFieldHeight / 2;
 
-        setAdjustGunForRobotTurn(true);
-        setAdjustRadarForGunTurn(true);
+        setAdjustGunForRobotTurn(false);
+        setAdjustRadarForGunTurn(false);
 
         Random r = new Random();
 
         while (true) {
-            setTurnRadarRight(10);
             if (getDistance(getX(), getY(), widthMiddle, heightMiddle) > 350) {
                 goTo(widthMiddle, heightMiddle);
             } else {
@@ -49,12 +49,17 @@ public class WhiteWarrior extends AdvancedRobot {
 
                 });*/
 
-                setTurnGunLeft(r.nextInt(40) + 40);
-                if (r.nextBoolean()) {
-                    fire(2);
-                }
+                // setTurnGunLeft(r.nextInt(40) + 40);
+
                 setAhead(r.nextInt(70) + 70);
-                setTurnRight(r.nextInt(30) + 30);
+                setTurnRight(r.nextInt(40) + 40);
+
+                if (r.nextBoolean()) {
+
+                    fire(r.nextInt(3));
+                }
+
+                scan();
             }
 
             execute();
@@ -65,12 +70,17 @@ public class WhiteWarrior extends AdvancedRobot {
     public void onScannedRobot(ScannedRobotEvent event) {
         /*String name = event.getName();
         double bearing = normaliseBearing(event.getBearingRadians());
-        double distance = event.getDistance();
         double energy = event.getEnergy();
         double heading = normaliseHeading(event.getHeadingRadians());
         double velocity = event.getVelocity();
 
         scannedRobots.put(name, new ScannedRobot(name, bearing, distance, energy, heading, velocity));*/
+        double distance = event.getDistance();
+        if (distance < 50) {
+            doFire = true;
+        } else {
+            doFire = false;
+        }
     }
 
     void goTo(double x, double y) {
