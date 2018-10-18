@@ -11,7 +11,7 @@ public class Target {
 
     public boolean isWithinShootingRange() {
         System.out.println("Range: " + event.getDistance());
-        return true;
+        return event.getDistance() < 150;
     }
 
     public boolean isBorderGuard() {
