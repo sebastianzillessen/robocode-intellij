@@ -4,40 +4,6 @@ import static java.lang.Math.PI;
 
 public class Helper {
 
-
-    /* default movement:
-      //Move towards an x and y coordinate
-
-    void goTo(double x, double y) {
-        double dist = 20;
-        double angle = Math.toDegrees(absbearing(getX(), getY(), x, y));
-        double r = turnTo(angle);
-        setAhead(dist * r);
-    }
-
-
-    //Turns the shortest angle possible to come to a heading, then returns the direction the
-     //the bot needs to move in.
-
-    int turnTo(double angle) {
-        double ang;
-        int dir;
-        ang = normaliseBearing(getHeading() - angle);
-        if (ang > 90) {
-            ang -= 180;
-            dir = -1;
-        } else if (ang < -90) {
-            ang += 180;
-            dir = -1;
-        } else {
-            dir = 1;
-        }
-        setTurnLeft(ang);
-        return dir;
-    }
-     */
-
-
     //if a bearing is not within the -pi to pi range, alters it to provide the shortest angle
     public static double normaliseBearing(double ang) {
         if (ang > PI)
